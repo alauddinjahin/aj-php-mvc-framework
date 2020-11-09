@@ -1,0 +1,11 @@
+{
+    "name": "alauddin/aj-php-mvc-framework",
+    "authors": [{
+        "name":"alauddinjahin",
+        "email": "alauddinjahin24@gmail.com"
+    }],
+    "type": "library",
+    "license": "MIT",
+    "description": "My php mvc framework",
+    "require": {}
+}
