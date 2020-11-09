@@ -4,6 +4,11 @@ use aj\phpmvc\db\Database;
 
 class Application
 {
+    const EVENT_BEFORE_REQUEST  = "beforeRequest";
+    const EVENT_AFTER_REQUEST   = "afterRequest";
+
+    protected array $eventListeners = [];
+    
     public static  Application $app;
     public static  string $ROOT_DIR;
     public string $layout="main";
@@ -55,6 +60,9 @@ class Application
     public function run()
     {
        try {
+           
+           //Trigger EventListener 
+            $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
 
             echo $this->router->resolve();
 
@@ -66,6 +74,24 @@ class Application
                'exception'=>$e
            ]);
        }
+    }
+    
+    
+    
+    public function on($eventName,$callback)
+    {
+        $this->eventListeners[$eventName][] = $callback;
+    }
+
+
+    public function triggerEvent($eventName)
+    {
+        //
+        $callbacks = $this->eventListeners[$eventName] ?? [];
+
+        foreach ($callbacks as $callback) {
+            call_user_func($callback);
+        }
     }
 
 
