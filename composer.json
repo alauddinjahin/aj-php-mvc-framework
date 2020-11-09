@@ -5,7 +5,6 @@
         "email": "alauddinjahin24@gmail.com"
     }],
     "type": "library",
-    "license": "MIT",
     "description": "My php mvc framework",
     "require": {}
 }
