@@ -7,5 +7,10 @@
         }
     ],
     "description": "My php mvc framework",
+    "autoload": {
+        "psr-4": {
+            "aj\\phpmvc\\": "."
+        }
+    },
     "require": {}
 }

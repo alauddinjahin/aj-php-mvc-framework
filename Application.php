@@ -1,8 +1,6 @@
 <?php
-namespace app\core;
-
-use app\core\Controller;
-use app\core\db\Database;
+namespace aj\phpmvc;
+use aj\phpmvc\db\Database;
 
 class Application
 {

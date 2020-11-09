@@ -1,6 +1,5 @@
 <?php
-namespace app\core;
-use app\core\Request;
+namespace aj\phpmvc;
 
 class Response
 {

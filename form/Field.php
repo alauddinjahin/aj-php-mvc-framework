@@ -1,8 +1,9 @@
 <?php 
 
-namespace app\core\form;
+namespace aj\phpmvc\form;
 
-use app\core\Model;
+use aj\phpmvc\Model;
+
 
 class Field extends BaseField
 {
